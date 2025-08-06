@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #f1f1f1;
+
+  font-family: "Poppins", sans-serif;
+
+  overflow-x: hidden;
+}
+
+hr {
+  height: 1px;
+  width: 90%; /* ou 100%, se preferir */
+  background-color: #d3d3d3;
+  margin: 20px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  height: 60px;
+  width: 100vw;
+
+  padding: 10px 50px 10px 80px;
+
+  background-color: #0077ff;
+
+  z-index: 999;
+}
+
+@media (min-width: 900px) {
+  header {
+    position: fixed;
+  }
+}
+
+.brandheader {
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+#logoheader {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+
+  text-decoration: none;
+
+  color: white;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+
+  padding: 8px 16px 8px 8px;
+
+  border-radius: 24px;
+
+  gap: 8px;
+}
+
+.input-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 24px;
+  min-height: 24px;
+
+  color: #7d7d7d;
+}
+
+.input-field {
+  min-width: 445px;
+  min-height: 25px;
+  border: none;
+  background-color: transparent;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: #7d7d7d;
+}
+
+.login-box {
+  display: flex;
+  align-items: center;
+
+  text-align: center;
+}
+
+.login-group {
+  display: flex;
+  flex-direction: row;
+
+  text-align: center;
+
+  color: white;
+}
+
+#user-icon {
+  padding: 5px;
+}
+
+#entrar-header {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  height: 100%;
+  width: 100vw;
+
+  margin-top: 70px;
+
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.brands-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  min-height: 240px;
+  width: 100%;
+
+  background-color: #ffffff;
+
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.sugestao-brand {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  color: #8d8d8d;
+
+  margin-bottom: 15px;
+}
+
+.brands-cars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  width: 70%;
+}
+
+.img-brand-sg {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 0 black;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse o círculo */
+  cursor: pointer;
+  background-color: rgb(255, 255, 255); /* Ou o fundo que desejar */
+  margin: 0 10px;
+  text-decoration: none; /* Remove underline do link */
+}
+
+.img-brand-sg img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain; /* Mantém a proporção da imagem */
+  user-select: none; /* Evita seleção da imagem */
+  pointer-events: none; /* Para não interferir no clique */
+}
+
+.popularcar-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 10px;
+  padding: 20px;
+
+  border: 1px solid black;
+
+  min-height: 350px;
+  min-width: 80%;
+}
+
+.carros-procurados {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  color: #8d8d8d;
+
+  margin-bottom: 15px;
+}
+
+.carrossel-carrosp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  gap: 20px;
+
+  border: 1px solid black;
+  min-height: 450px;
+  min-width: 90%;
+}
+
+.lista-carrosp {
+  background-color: white;
+  border-radius: 8px;
+  height: 350px;
+  width: 15%;
+}
+
+.img-list-carrosp {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  border-radius: 8px 8px 0 0;
+  border: 1px solid black;
+  height: 150px;
+  width: 100%;
+}
+
+.img-list-carrosp .botao-img-test {
+  opacity: 0;
+  transition: 0.8s ease;
+}
+
+.img-list-carrosp:hover .botao-img-test {
+  opacity: 1;
+}
+
+.botao-img-test {
+  position: absolute; /* ou relative, conforme o caso */
+  bottom: 60px; /* ou top/left/right, conforme onde quiser colocar */
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-around;
+
+  gap: 100px;
+
+  z-index: 40;
+}
+
+.botao-img-test:hover {
+  cursor: pointer;
+}
+
+.botao-img-test button {
+  background-color: white;
+  border: none;
+  opacity: 0.7;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+}
+
+.botao-img-test button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.img-test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  display: none;
+}
+
+.img-test.active {
+  display: block;
+}
+
+.azul-fake {
+  height: 100%;
+  width: 100%;
+
+  background-color: blue;
+}
+
+.red-fake {
+  height: 100%;
+  width: 100%;
+
+  background-color: rgb(255, 0, 0);
+}
+
+.green-fake {
+  height: 100%;
+  width: 100%;
+
+  background-color: rgb(0, 255, 47);
+}
+
+.descricao-carrosp {
+  display: flex;
+  flex-direction: column;
+
+  padding: 6px 6px 45px 6px;
+
+  gap: 2px;
+}
+
+.cidade-carrosp {
+  display: flex;
+  justify-content: center;
+
+  padding: 8px;
+
+  border-top: 1px solid rgb(179, 179, 179);
+}
+
+.box-lista-carros {
+  display: flex;
+  justify-content: center;
+
+  height: 70vh;
+  width: 100vw;
+
+  border: 1px solid black;
+}
+
+.filtro-box {
+  display: flex;
+  flex-direction: column;
+
+  height: 90%;
+  width: 20%;
+
+  border: 1px solid black;
+}
+
+.lista-carros {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 60%;
+
+  border: 1px solid black;
+}
